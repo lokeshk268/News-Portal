@@ -1,0 +1,13 @@
+<div class="container">
+ <h2>Latest News</h2>
+
+ <div ng-if="news">
+     <div ng-repeat="n in news">
+        <h2>{{n.title}}</h2>
+        <p>{{n.category}}.Posted on {{n.time}}<br/>
+        {{n.body}}</p>
+        <a href="#!/single/{{n.time}}">Read More</a>
+        <hr/>
+     </div>
+ </div>
+</div>

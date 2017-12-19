@@ -1,0 +1,16 @@
+<h1>Category News</h1>
+
+<div ng-if="cnews.err===1">
+  <div class="alert alert-danger">{{cnews.data}}</div>
+</div>
+<div ng-if="cnews.err===0">
+    <div ng-repeat="n in cnews.data" >
+        <h3>{{n.title}}</h3>
+        <p>
+      <label>Category : {{n.category}}</label><br/>
+      Posted on : {{n.date|date}}<br/>
+      <a href="#!/single/{{n.date}}"><img src="read.jpg"/></a>
+        </p>
+        <hr/>
+    </div>
+</div>

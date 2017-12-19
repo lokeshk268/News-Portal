@@ -1,0 +1,116 @@
+<!DOCTYPE html >
+<html>
+<head>
+<title>Lok-news</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="assets/font/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/font/font.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="assets/css/style.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="assets/css/responsive.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="assets/css/jquery.bxslider.css" media="screen" />
+<script src="admin/node_modules/angular/angular.js"></script>
+<script src="admin/node_modules/angular-route/angular-route.js"></script>
+<script src="app/front.js"></script>
+<!-- Don't forget to place the script that does the asynchronous loading of Google+ JavaScript API.
+             Because it is loaded asynchronously, it might take some time to load. 
+             Place some loading notification, so user won't get confused. 
+             You can use ng-show and ng-hide to show or hide your notification and accomplish best user experience. -->
+             <script>// <![CDATA[
+            (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/client:plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+ 
+// ]]></script><!-- Second script needed for accessing Google API (gapi.*) . It's usage will be described in controller. --><script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+
+</head>
+<body ng-app="NewsPortal" ng-controller="MainCtrl">
+<div class="body_wrapper">
+  <div class="center">
+    <div class="header_area">
+      <div class="logo floatleft"><a href="#"><img src="images/logo.png" alt="" /></a></div>
+      <div class="top_menu floatleft">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>v
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Subscribe</a></li>
+          <li><a href="#!/login">Login</a></li>
+        </ul>
+      </div>
+      <div class="social_plus_search floatright">
+        <div class="social">
+          <ul>
+            <li><a href="#" class="twitter"></a></li>
+            <li><a href="#" class="facebook"></a></li>
+            <li><a href="#" class="feed"></a></li>
+          </ul>
+        </div>
+        <div class="search">
+          <form action="#" method="post" id="search_form">
+            <input type="text" placeholder="Search news" ng-model="ser" />
+            <input type="button" id="searchform" value="search" ng-click="search()"/>
+        
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="main_menu_area">
+      <ul id="nav">
+       
+        <li><a href="#!/">Home</a></li>
+         <li> <ul>
+           <li> <a href="#!/category/Sports"> Sports</a></li>
+          <li> <a href="#!/category/Weather">Weather</a></li>
+           <li> <a href="#!/category/Poltics">Poltics</a></li>
+          <li> <a href="#!/category/International">International</a></li>
+           <li> <a href="#!/category/Others">Others</a></li>
+          </ul>
+        </li>
+        
+          </ul>
+        </li>
+        <li><a href="#">entertainment</a></li>
+        <li><a href="#">culture</a></li>
+        
+        <li><a href="#!/contact">Contact Us</a></li>
+              </ul>
+    </div>
+    <div class="slider_area">
+      <div class="slider">
+        <ul class="bxslider">
+          <li><img src="images/1.jpg" alt="" title="Slider caption text" /></li>
+          <li><img src="images/2.jpg" alt="" title="Slider caption text" /></li>
+          <li><img src="images/3.jpg" alt="" title="Slider caption text" /></li>
+        </ul>
+      </div>
+    </div>
+    <div class="content_area">
+      <div class="main_content floatleft" ng-view>
+
+      </div>
+    <script type="text/javascript" src="assets/js/jquery-min.js"></script> 
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="assets/js/jquery.bxslider.js"></script> 
+<script type="text/javascript" src="assets/js/selectnav.min.js"></script> 
+<script type="text/javascript">
+selectnav('nav', {
+    label: '-Navigation-',
+    nested: true,
+    indent: '-'
+});
+selectnav('f_menu', {
+    label: '-Navigation-',
+    nested: true,
+    indent: '-'
+});
+$('.bxslider').bxSlider({
+    mode: 'fade',
+    captions: true
+});
+</script>
+</body>
+</html>
